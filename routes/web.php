@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use function Ramsey\Uuid\v1;
+
 Route::get('hello', function () {
     return 'Hello, World!';
 });
@@ -23,7 +25,10 @@ Route::get('contact', function () {
     return ['foo' => 'bar'];
 });
 
-
+Route::get('home', function () {
+    // return 'home';/
+    return view('home');
+});
 
 // Route::get('/', function () {
 //     return view('welcome');
